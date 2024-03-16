@@ -56,15 +56,15 @@ circleQuestion()
 
 # Exercise 8: Calculate the slope, x-intercept and y-intercept of y = 2x -2
 
-
+# -
 
 # Exercise 9: Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
 
-
+# -
 
 # Exercise 10: Compare the slopes in tasks 8 and 9.
 
-
+# -
 
 # Exercise 11: Calculate the value of y (y = x**2 + 6 * x + 9). Try to use different X values and figure out at what X value Y is going to be 0.
 
@@ -101,3 +101,80 @@ if "jargon" in testEx14:
     print("Well done! It contained the word 'jargon'!")
 else:
     print("Try again!")
+
+# Exercise 15: There is no 'on' on both dragon and python
+
+if "on" not in dragonName and pythonName:
+    print("Are you sure? Do it again!")
+else:
+    print("Nice! The exercise worked, since it returned the falsy value")
+
+# Exercise 16: Find the length of the text 'python' and convert the value to float and convert it to string.
+    
+floatPython = float(len(pythonName))
+print(floatPython)
+print(type(floatPython))
+
+stringFloatPython = str(floatPython)
+print(stringFloatPython)
+print(type(stringFloatPython))
+
+# Exercise 17: Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+
+askNumberUser = int(input("Please, provide a number so we can check if it's even. Only type natural numbers: "))
+
+if askNumberUser % 2 == 0:
+    print("The number typed is even.")
+else:
+    print("The number provided is odd")
+
+# Exercise 18: Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+
+floorDivisionCheck = 7 // 3
+intConvertedValue = int(2.7)
+
+if floorDivisionCheck == intConvertedValue:
+    print("The question asked has been resolved")
+else:
+    print("Try Again.")
+
+# Exercise 19: Check if type of '10' is equal to type of 10
+
+if type("10") == type(10):
+    print("Are you sure?")
+else:
+    print("That's right! They are NOT the same class/type.")
+
+# Exercise 20: Check if int('9.8') is equal to 10
+    
+if int(9.8) == 10:
+    print("The value returned is: True")
+else:
+    print("The value returned is: False")
+
+# Exercise 21: Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
+    
+def salaryOfPerson():
+    weeklyHours = int(input("Please, type your weekly hours: "))
+    ratePerHour = float(input("Please type the hourly rate: "))
+    weeklyEarning = weeklyHours * ratePerHour
+
+    print(f'The amount you make weekly is equivalent to: {weeklyEarning}')
+
+# Exercise 22: Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+
+def secondsToLive():
+    yearsLived = int(input("How many years have you lived?"))
+    yearsToSeconds = yearsLived * 31536000
+
+    print(f'You have lived the total amount of {yearsToSeconds} seconds!')
+
+# Exercise 23: Write a Python script that displays the following table:
+# 1 1 1 1 1
+# 2 1 2 4 8
+# 3 1 3 9 27
+# 4 1 4 16 64
+# 5 1 5 25 125
+
+for i in range(1, 6):
+    print(i, i ** 0, i ** 1, i ** 2, i ** 3)
