@@ -75,25 +75,101 @@ exercise11()
 
 # Exercise  12: Change Python for Everyone to Python for All using the replace method or other methods.
 
+variableExercise12 = "Python for Everyone"
 
+print(variableExercise12.replace("Everyone", "All"))
 
 # Exercise  13: Split the string 'Coding For All' using space as the separator (split()) .
+
+print(company.split(" "))
+
 # Exercise  14: "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
+
+faang = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
+
+print(faang.split(", "))
+
 # Exercise  15: What is the character at index 0 in the string Coding For All.
+
+print(company[0])
+
 # Exercise  16: What is the last index of the string Coding For All.
+
+print(company[-1])
+
 # Exercise  17: What character is at index 10 in "Coding For All" string.
+
+print(company[10])
+
 # Exercise  18: Create an acronym or an abbreviation for the name 'Python For Everyone'.
+
+def acronymAbbreviation(text):
+    text = text.split(" ")
+    firstWord = text[0]
+    secondWord = text[1]
+    thirdWord = text[2]
+    print(firstWord[0] + secondWord[0] + thirdWord[0])
+
+variablePFE = "Python For Everyone"
+
+acronymAbbreviation(variablePFE)
+
 # Exercise  19: Create an acronym or an abbreviation for the name 'Coding For All'.
+
+company = "Coding For All"
+
+acronymAbbreviation(company)
+
 # Exercise  20: Use index to determine the position of the first occurrence of C in Coding For All.
+
+print(company.index("C"))
+
 # Exercise  21: Use index to determine the position of the first occurrence of F in Coding For All.
+
+print(company.index("F"))
+
 # Exercise  22: Use rfind to determine the position of the last occurrence of l in Coding For All People.
+
+codingForAllPeople = company + " People"
+
+print(codingForAllPeople.rfind("l"))
+
 # Exercise  23: Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+textSentence = "You cannot end a sentence with because because because is a conjunction"
+
+print(f'The position of the first occurrence of the word "because" with "find" is: {textSentence.find("because")}')
+
+print(f'The position of the first occurrence of the word "because" with "index" is: {textSentence.index("because")}')
+
 # Exercise  24: Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+print(f'The position of the last occurrence of the word "because" with "rindex" is: {textSentence.rindex("because")}')
+
 # Exercise  25: Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-# Exercise  26: Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-# Exercise  27: Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-# Exercise  28: Does ''Coding For All' start with a substring Coding?
-# Exercise  29: Does 'Coding For All' end with a substring coding?
+
+print(f'The result of slicing "because because because" from the sentence is: {textSentence.replace("because ", "")}')
+
+# [This exercise is the same as the 23th one] Exercise  26: Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+# [This exercise is duplicated, see 25th] Exercise  27: Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+# [Pending, not ended] Exercise  28: Does ''Coding For All' start with a substring Coding?
+
+if company.find("Coding") == company[0]:
+    print("Yes, it does start with a substring 'Coding'")
+else:
+    print("Check again.")
+
+# [Pending, not ended] Exercise  29: Does 'Coding For All' end with a substring coding?
+
+if company.rfind("coding") == company[-1]:
+    print("Yes, it does end with 'coding'.")
+else:
+    print("No, it does not end with 'coding'.")
+
+print(company.rfind("coding"))
+
 # Exercise  30: '   Coding For All      '  , remove the left and right trailing spaces in the given string.
 # Exercise  31: Which one of the following variables return True when we use the method isidentifier():
 #   30DaysOfPython
