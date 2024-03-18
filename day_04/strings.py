@@ -154,26 +154,40 @@ print(f'The result of slicing "because because because" from the sentence is: {t
 
 # [This exercise is duplicated, see 25th] Exercise  27: Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
 
-# [Pending, not ended] Exercise  28: Does ''Coding For All' start with a substring Coding?
+# Exercise  28: Does ''Coding For All' start with a substring Coding?
 
-if company.find("Coding") == company[0]:
-    print("Yes, it does start with a substring 'Coding'")
-else:
-    print("Check again.")
+def startsWith(text):
+    text = text.split(" ")
+    firstWord = text[0]
+    if firstWord == "Coding":
+        print("Yes, it does start with a substring 'Coding'")
+    else:
+        print("Try again.")
 
-# [Pending, not ended] Exercise  29: Does 'Coding For All' end with a substring coding?
+startsWith(company)
 
-if company.rfind("coding") == company[-1]:
-    print("Yes, it does end with 'coding'.")
-else:
-    print("No, it does not end with 'coding'.")
+# Exercise  29: Does 'Coding For All' end with a substring coding?
 
-print(company.rfind("coding"))
+def endsWith(text):
+    text = text.split(" ")
+    lastWord = text[-1]
+    if lastWord == 'coding':
+        print("Try again.")
+    else:
+        print("It does not end with 'coding'")
+
+endsWith(company)
 
 # Exercise  30: '   Coding For All      '  , remove the left and right trailing spaces in the given string.
+
+variableLeftRight = '   Coding For All      '
+
+print(variableLeftRight.replace("   ", ""))
+
 # Exercise  31: Which one of the following variables return True when we use the method isidentifier():
 #   30DaysOfPython
 #   thirty_days_of_python
+
 
 # Exercise  32: The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
 # Exercise  33: Use the new line escape sequence to separate the following sentences.
