@@ -188,18 +188,45 @@ print(variableLeftRight.replace("   ", ""))
 #   30DaysOfPython
 #   thirty_days_of_python
 
+variable30DOP = "30DaysOfPython"
+variableTDOP = "thirty_days_of_python"
+
+print(f'The first variable returned: {variable30DOP.isidentifier()}')
+print(f'The second variable returned: {variableTDOP.isidentifier()}')
 
 # Exercise  32: The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
+
+listExercise32 = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+
+print("# ".join(listExercise32))
+
 # Exercise  33: Use the new line escape sequence to separate the following sentences.
 #   I am enjoying this challenge.
 #   I just wonder what is next.
+
+lineEscape = "I am enjoying this challenge.\nI just wonder what is next."
+
+print(lineEscape)
+
 # Exercise  34: Use a tab escape sequence to write the following lines.
 #   Name      Age     Country   City
 #   Asabeneh  250     Finland   Helsinki
+
+tabEscape = "Name\t\tAge\tCountry\tCity\nAsabeneh\t250\tFinland\tHelsinki"
+
+print(tabEscape)
+
 # Exercise  35: Use the string formatting method to display the following:
 #   radius = 10
 #   area = 3.14 * radius ** 2
 #   The area of a circle with radius 10 is 314 meters square.
+
+radius = 10
+area = 3.14 * radius ** 2
+formattedString = f'The area of a circle with radius {radius} is {area} meters square'
+
+print(formattedString)
+
 # Exercise  36: Make the following using string formatting methods:
 #   8 + 6 = 14
 #   8 - 6 = 2
@@ -208,3 +235,25 @@ print(variableLeftRight.replace("   ", ""))
 #   8 % 6 = 2
 #   8 // 6 = 1
 #   8 ** 6 = 262144
+
+num1 = 8
+num2 = 6
+
+addition = num1 + num2
+difference = num1 - num2
+multiplication = num1 * num2
+division = num1 / num2
+modulus = num1 % num2
+floorDivision = num1 // num2
+exponentiation = num1 ** num2
+
+print(f'The result of {num1} + {num2} = {addition}')
+print(f'The result of {num1} - {num2} = {difference}')
+print(f'The result of {num1} * {num2} = {multiplication}')
+print(f'The result of {num1} / {num2} = {division}')
+print(f'The result of {num1} % {num2} = {modulus}')
+print(f'The result of {num1} // {num2} = {floorDivision}')
+print(f'The result of {num1} ** {num2} = {exponentiation}')
+
+
+
