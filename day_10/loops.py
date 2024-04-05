@@ -298,7 +298,7 @@ land_list = []
 
 for country in countries:
     if "land" in country:
-        final_list = land_list.append(country)
+        land_list.append(country)
 
 print(land_list)
 
@@ -2939,10 +2939,48 @@ countries_data = [
 
 # Exercise 3.1: What are the total number of languages in the data.
 
-print(len(countries_data))
+language_list = []
+exercise_2_list = []
 
-for i in countries_data < len(countries_data):
-    i = 0
-    if countries_data[i] == "languages":
-        for language in countries_data:
-            print(language)
+for language in countries_data:
+    get_language = language.get("languages")
+    language_list.append(get_language)
+    exercise_2_list.append(get_language)
+
+unified_language_list = list(
+    set(
+        item for sublist in language_list for item in sublist
+    )
+)
+
+final_language_list = list(
+    set(unified_language_list)
+)
+
+final_language_list.sort()
+
+print(final_language_list)
+
+# Exercise 3.2: Find the ten most spoken languages from the data
+
+unified_ex2_list = list(item for sublist in exercise_2_list for item in sublist)
+
+count_languages = {}
+
+i = 0
+
+for item in unified_ex2_list:
+    if item in count_languages:
+        count_languages[item] += 1
+    else:
+        count_languages[item] = 1
+
+def sort_value(item):
+    return item[1]
+
+sorted_languages = sorted(count_languages.items(), key=sort_value, reverse=True)
+print(sorted_languages[:10])
+
+# Exercise 3.3: Find the 10 most populated countries in the world
+
+# Exercise Left Out For Later On
