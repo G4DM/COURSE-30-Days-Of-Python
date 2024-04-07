@@ -146,3 +146,85 @@ def sum_of_numbers(number):
 print(sum_of_numbers(10))
 
 # Exercise 14: Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+
+def sum_of_odds(number):
+    result = 0
+    for i in range(1, number + 1, 2):
+        result += i
+
+    return result
+
+print(sum_of_odds(6))
+
+# Exercise 15: Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+
+def sum_of_even(number):
+    result = 0
+    for i in range(0, number + 1, 2):
+        result += i
+    
+    return result
+
+print(sum_of_even(6))
+
+# Exercises Level 2
+
+# Exercise 1: Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+def evens_and_odds(number):
+    evens = 0
+    odds = 0
+    for i in range(0, number + 1, 1):
+        if i % 2 == 0:
+            evens += 1
+        else:
+            odds += 1
+    result = f'The evens in {number} are {evens}, and the odds are {odds}.'
+
+    return result
+
+print(evens_and_odds(100))
+
+# Exercise 2: Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+
+def factorial(number):
+    if number == 0:
+        number = 1
+    else:
+        for i in range(1, number, 1):
+            number *= i
+
+    return number    
+
+print(factorial(10))
+
+# Exercise 3: Call your function is_empty, it takes a parameter and it checks if it is empty or not
+
+def is_empty(parameter):
+    if not parameter:
+        return 'Is empty'
+    else:
+        return 'It is not empty'
+
+test_one = ''
+test_two = 'Not empty'
+
+print(is_empty(test_one))
+print(is_empty(test_two))
+
+# Exercise 4: Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+
+def calculate_mean(list_test):
+    result = 0
+    for i in range(0, len(list_test), 1):
+        result += list_test[i]
+        final_result = result / len(list_test)
+    return final_result
+
+def calculate_median(list_test):
+    if len(list_test) & 2 == 0:
+        even_median = 0.5 * (list_test)
+
+list_4 = [1, 3, 6, 9, 10]
+
+print(calculate_mean(list_4))
