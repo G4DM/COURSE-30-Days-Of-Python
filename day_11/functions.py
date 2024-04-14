@@ -3094,5 +3094,35 @@ countries_data = [
 # Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
 def most_spoken_languages(countries):
     quantity_spoken = {}
-    for language in languages(0, len(countries), 1):
-        
+    for country in countries:
+        for language in country["languages"]:
+            if language in quantity_spoken:
+                quantity_spoken[language] += country["population"]
+            else:
+                quantity_spoken[language] = country["population"]
+    
+    sorted_languages = sorted(quantity_spoken.items(), key=lambda x: x[1], reverse=True )
+    top_10 = sorted_languages[:10]
+    top_20 = sorted_languages[10:20]
+    formatted = f'The top 10 is {top_10}.\n\n And the top 20 is {top_20}'
+
+    return formatted
+
+print(most_spoken_languages(countries_data))
+
+# Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
+
+def most_populated_countries(countries):
+    populations = []
+    for country in countries:
+        populations.append({"country": country["name"], "population": country["population"]})
+
+    sorted_populations = sorted(populations, key=lambda x: x["population"], reverse=True)
+    top_10 = sorted_populations[:10]
+    top_20 = sorted_populations[:20]
+
+    formatted = f'The top 10 is {top_10}.\n\n And the top 20 is {top_20}'
+
+    return formatted
+
+print(most_populated_countries(countries_data))
