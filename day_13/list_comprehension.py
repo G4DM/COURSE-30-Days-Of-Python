@@ -25,4 +25,16 @@ print(numbers)
 
 countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
 
-flattened_countries = []
+flattened_countries = [[country.upper(), country[:3].upper(), capital.upper()] for sublist in countries for country, capital in sublist]
+
+print(flattened_countries)
+
+# Exercise 5: Change the following list to a list of dictionaries:
+
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+
+dictionary_countries = {}
+
+exercise_5 = [[country.upper(), capital.upper()] for sublist in countries for country, capital in sublist]
+
+print(exercise_5)
