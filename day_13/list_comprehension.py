@@ -35,6 +35,20 @@ countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', '
 
 dictionary_countries = {}
 
-exercise_5 = [[country.upper(), capital.upper()] for sublist in countries for country, capital in sublist]
+exercise_5 = [{"country": country.upper(), "capital": capital.upper()} for sublist in countries for country, capital in sublist]
 
 print(exercise_5)
+
+# Exercise 6: Change the following list of lists to a list of concatenated strings:
+
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+
+exercise_6 = [name + " " + surname for sublist in names for name, surname in sublist]
+
+print(exercise_6)
+
+# Exercise 7: Write a lambda function which can solve a slope or y-intercept of linear functions.
+
+slope = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1)
+
+print(slope(2, 4, 5, 10))
