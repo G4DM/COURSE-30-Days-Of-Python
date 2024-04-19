@@ -46,9 +46,87 @@ print(list(odd_numbers))
 
 # reduce
 
-def reduce_countries(x):
-    return x
+def add_two_nums(x, y):
+    return int(x) + int(y)
 
-final = reduce(reduce_countries, countries)
+final = reduce(add_two_nums, numbers)
 
 print(final)
+
+# Exercise 4: Use for loop to print each country in the countries list.
+
+for country in countries:
+    print(country)
+
+# I do not know if it meant the first thing, but I did it both ways
+
+def print_list(iterable):
+    print(iterable)
+    return iterable
+
+print(list(map(print_list, countries)))
+
+# Exercise 5: Use for to print each name in the names list.
+
+print(list(map(print_list, names)))
+
+# Exercise 6: Use for to print each number in the numbers list.
+
+print(list(map(print_list, numbers)))
+
+# region Exercises Level 2
+
+# Exercise 1: Use map to create a new list by changing each country to uppercase in the countries list
+
+def upper_case(iterable):
+    return iterable.upper()
+
+print(list(map(upper_case, countries)))
+
+# Exercise 2: Use map to create a new list by changing each number to its square in the numbers list
+
+def square(iterable):
+    return iterable ** 2
+
+print(list(map(square, numbers)))
+
+# Exercise 3: Use map to change each name to uppercase in the names list
+
+print(list(map(upper_case, names)))
+
+# Exercise 4: Use filter to filter out countries containing 'land'.
+
+def filter_land(iterable):
+    if "land" in iterable:
+        return True
+    return False
+
+print(list(filter(filter_land, countries)))
+
+# Exercise 5: Use filter to filter out countries having exactly six characters.
+
+def filter_six(iterable):
+    if len(iterable) != 6:
+        return True
+    return False
+
+print(list(filter(filter_six, countries)))
+
+# Exercise 6: Use filter to filter out countries containing six letters and more in the country list.
+
+def filter_six_or_more(iterable):
+    if len(iterable) <= 6:
+        return True
+    return False
+
+print(list(filter(filter_six_or_more, countries)))
+
+# Exercise 7: Use filter to filter out countries starting with an 'E'
+
+def filter_e(iterable):
+    lower_case = iterable.lower()
+    if "e" in lower_case[0]:
+        return False
+    return True
+
+print(list(filter(filter_e, countries)))
