@@ -370,9 +370,27 @@ print(list(filter(common_pattern, countries)))
 
 def countries_dict(iterable):
     new_dict = {}
-    for i in range(len(iterable)):
+    for i in range(0, len(iterable), 1):
         first_letter = iterable[i][0]
-        new_dict[first_letter] = new_dict.get(first_letter, 0) + 1
-    return new_dict
+        if first_letter in new_dict:
+            new_dict[first_letter] += 1
+        else:
+            new_dict[first_letter] = 1
+            
+    return print(new_dict)
 
-print(dict(map(countries_dict, countries)))
+countries_dict(countries)
+
+# Exercise 14: Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
+
+def get_first_ten_countries():
+    return list(filter(lambda country: countries.index(country) < 10, countries))
+
+print(get_first_ten_countries())
+
+# Exercise 15: Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
+
+def get_last_ten_countries():
+    return list(filter(lambda country: countries.index(country) >= len(countries) - 10, countries))
+
+print(get_last_ten_countries())
